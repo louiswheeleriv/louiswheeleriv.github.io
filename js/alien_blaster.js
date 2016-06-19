@@ -82,7 +82,7 @@ var deathText = new PointText({
     justification: 'center',
     fontSize: 30,
     fillColor: 'white',
-    content: 'You ded',
+    content: '(╯°□°）╯︵ ┻━┻',
     visible: false
 });
 
@@ -249,7 +249,7 @@ DatBoi.prototype = {
         //this.wrapBorders();
         this.frameCount++;
     },
-    
+
     wrapBorders: function() {
         if (this.point.x < -DAT_BOI_RADIUS_MAX) {
             this.point.x = view.size.width + DAT_BOI_RADIUS_MAX;
@@ -423,7 +423,7 @@ function setupGame(numDef, hp, invRate) {
     restartText.visible = false;
     healthText.content = ('Health: ' + health);
     scoreText.content = ('Score: ' + 0);
-    
+
     clearDemBois(demBois);
     demBois = createDemBois(1);
 }
@@ -458,7 +458,7 @@ function onFrame() {
         moveDemBois();
     }
     moveStars();
-    
+
 }
 
 function spawnInvaders() {
