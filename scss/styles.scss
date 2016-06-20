@@ -67,81 +67,8 @@ div.page-home {
         }
     }
 
-    /*
-
-    // Top banner (desktop)
-    @media(min-width: $md) {
-        div.banner {
-            div.banner-text {
-                position: absolute;
-                top: 80px;
-                left: 48%;
-
-                p {
-                    color: #FFFFFF;
-                    margin: 0 auto;
-                }
-                p.banner-text1 {
-                    font-size: 54px;
-                    font-weight: bold;
-                }
-                p.banner-text2 {
-                    float: right;
-                    font-size: 26px;
-                    font-weight: lighter;
-                }
-                @media(min-width: $lg) {
-                    left: 40%;
-                    p.banner-text1 {
-                        font-size: 78px;
-                    }
-                    p.banner-text2 {
-                        font-size: 40px;
-                    }
-                }
-            }
-
-            img.banner-image {
-                max-width: 1000px;
-                margin: auto;
-            }
-        }
-    }
-
-    // Top banner (mobile)
-    @media(max-width: $sm) {
-        div.banner {
-            div.banner-text {
-                position: absolute;
-                top: 30px;
-                left: 40%;
-
-                p {
-                    color: #FFFFFF;
-                    margin: 0 auto;
-                }
-                p.banner-text1 {
-                    font-size: 32px;
-                    font-weight: bold;
-                }
-                p.banner-text2 {
-                    float: right;
-                    font-size: 20px;
-                    font-weight: lighter;
-                }
-            }
-
-            img.banner-image {
-                width: 100%;
-                margin: auto;
-            }
-        }
-    }
-
-    */
-
     nav.navbar {
-        max-width: 1000px;
+        max-width: 1100px;
         margin: auto;
     }
 
