@@ -541,8 +541,13 @@ function gameOver() {
     // Player is dead!
     deathText.visible = true;
     restartText.visible = true;
+
     deathText.bringToFront();
     restartText.bringToFront();
+    _.each(demBois, function(boi) {
+        boi.raster.bringToFront();
+    });
+
     invaders = clearInvaders(invaders);
     bullets = clearBullets(bullets);
 }
