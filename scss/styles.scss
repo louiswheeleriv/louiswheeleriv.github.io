@@ -1,29 +1,99 @@
+$xs: 479px;
+$sm: 480px;
+$md: 768px;
+$lg: 992px;
+
 body {
     background-color: #E5E5E5;
 }
 
 div.page-home {
     
-    // Top banner (large)
-    @media(min-width: 768px) {
-        div.banner {
-            h1 {
-                position: absolute;
-                left: 50%;
-                font-size: 54px;
-                color: #FFFFFF;
+    /*  EXPERIMENTAL
+    div.banner {
+        div.banner-text {
+            position: absolute;
+            
+            p {
+                color: white;
+                margin: 0;
             }
-            @media(min-width: 992px) {
-                h1 {
-                    left: 40%;
+            p.banner-text1 {
+                font-size: 54px;
+                font-weight: bold;
+            }
+            p.banner-text2 {
+                float: right;
+                font-size: 26px;
+                font-weight: lighter;
+            }
+            
+            @media(min-width: $lg) {
+                top: 80px;
+                left: 40%;
+                p.banner-text1 {
+                    font-size: 78px;
+                    font-weight: bold;
+                }
+                p.banner-text2 {
+                    float: right;
+                    font-size: 40px;
+                    font-weight: lighter;
                 }
             }
-            h1.greeting1 {
+            @media(min-width: $md) {
                 top: 80px;
+                left: 48%;
             }
-            h1.greeting2 {
-                top: 180px;
+            @media(min-width: $sm) {
+                top: 30px;
+                left: 40%;
             }
+            @media(max-width: $xs) {
+                top: 30px;
+                left: 40%;
+            }
+        }
+        
+        img.banner-image {
+            margin: auto;
+            width: 100%;
+        }
+    }
+    */
+    
+    // Top banner (desktop)
+    @media(min-width: $med) {
+        div.banner {
+            div.banner-text {
+                position: absolute;
+                top: 80px;
+                left: 48%;
+                
+                p {
+                    color: #FFFFFF;
+                    margin: 0 auto;
+                }
+                p.banner-text1 {
+                    font-size: 54px;
+                    font-weight: bold;
+                }
+                p.banner-text2 {
+                    float: right;
+                    font-size: 26px;
+                    font-weight: lighter;
+                }
+                @media(min-width: $lrg) {
+                    left: 40%;
+                    p.banner-text1 {
+                        font-size: 78px;
+                    }
+                    p.banner-text2 {
+                        font-size: 40px;
+                    }
+                }
+            }
+            
             img.banner-image {
                 max-width: 1000px;
                 margin: auto;
@@ -32,20 +102,28 @@ div.page-home {
     }
     
     // Top banner (mobile)
-    @media(max-width: 767px) {
+    @media(max-width: $sm) {
         div.banner {
-            h1 {
+            div.banner-text {
                 position: absolute;
-                left: 65%;
-                font-size: 24px;
-                color: #FFFFFF;
+                top: 30px;
+                left: 40%;
+                
+                p {
+                    color: #FFFFFF;
+                    margin: 0 auto;
+                }
+                p.banner-text1 {
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+                p.banner-text2 {
+                    float: right;
+                    font-size: 20px;
+                    font-weight: lighter;
+                }
             }
-            h1.greeting1 {
-                top: 12px;
-            }
-            h1.greeting2 {
-                top: 55px;
-            }
+            
             img.banner-image {
                 width: 100%;
                 margin: auto;
