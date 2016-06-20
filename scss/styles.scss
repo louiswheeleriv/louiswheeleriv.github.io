@@ -8,12 +8,11 @@ body {
 }
 
 div.page-home {
-    
-    /*  EXPERIMENTAL
+
     div.banner {
         div.banner-text {
             position: absolute;
-            
+
             p {
                 color: white;
                 margin: 0;
@@ -27,12 +26,12 @@ div.page-home {
                 font-size: 26px;
                 font-weight: lighter;
             }
-            
+
             @media(min-width: $lg) {
                 top: 80px;
                 left: 40%;
                 p.banner-text1 {
-                    font-size: 78px;
+                    font-size: 76px;
                     font-weight: bold;
                 }
                 p.banner-text2 {
@@ -41,35 +40,43 @@ div.page-home {
                     font-weight: lighter;
                 }
             }
-            @media(min-width: $md) {
+            @media(min-width: $md) and (max-width: $lg - 1) {
                 top: 80px;
                 left: 48%;
             }
-            @media(min-width: $sm) {
-                top: 30px;
+            @media(min-width: $sm) and (max-width: $md - 1) {
+                top: 70px;
                 left: 40%;
+                p.banner-text1 {
+                    font-size: 42px;
+                }
             }
-            @media(max-width: $xs) {
-                top: 30px;
-                left: 40%;
+            @media(max-width: $xs) and (max-width: $sm - 1) {
+                top: 36px;
+                left: 37%;
+                p.banner-text1 {
+                    font-size: 34px;
+                }
             }
         }
-        
+
         img.banner-image {
             margin: auto;
+            max-width: 1000px;
             width: 100%;
         }
     }
-    */
-    
+
+    /*
+
     // Top banner (desktop)
-    @media(min-width: $med) {
+    @media(min-width: $md) {
         div.banner {
             div.banner-text {
                 position: absolute;
                 top: 80px;
                 left: 48%;
-                
+
                 p {
                     color: #FFFFFF;
                     margin: 0 auto;
@@ -83,7 +90,7 @@ div.page-home {
                     font-size: 26px;
                     font-weight: lighter;
                 }
-                @media(min-width: $lrg) {
+                @media(min-width: $lg) {
                     left: 40%;
                     p.banner-text1 {
                         font-size: 78px;
@@ -93,14 +100,14 @@ div.page-home {
                     }
                 }
             }
-            
+
             img.banner-image {
                 max-width: 1000px;
                 margin: auto;
             }
         }
     }
-    
+
     // Top banner (mobile)
     @media(max-width: $sm) {
         div.banner {
@@ -108,7 +115,7 @@ div.page-home {
                 position: absolute;
                 top: 30px;
                 left: 40%;
-                
+
                 p {
                     color: #FFFFFF;
                     margin: 0 auto;
@@ -123,19 +130,21 @@ div.page-home {
                     font-weight: lighter;
                 }
             }
-            
+
             img.banner-image {
                 width: 100%;
                 margin: auto;
             }
         }
     }
-    
+
+    */
+
     nav.navbar {
         max-width: 1000px;
         margin: auto;
     }
-    
+
     div.content {
         height: 1000px;
     }
