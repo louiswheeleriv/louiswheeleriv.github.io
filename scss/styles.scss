@@ -3,8 +3,13 @@ $sm: 480px;
 $md: 768px;
 $lg: 992px;
 
+$maxScreenWidth: 1000px;
+
+$COLOR_WHITE: #FFFFFF;
+$COLOR_BG_GRAY: #E5E5E5;
+
 body {
-    background-color: #E5E5E5;
+    background-color: $COLOR_BG_GRAY;
 }
 
 div.page-home {
@@ -14,7 +19,7 @@ div.page-home {
             position: absolute;
 
             p {
-                color: white;
+                color: $COLOR_WHITE;
                 margin: 0;
             }
             p.banner-text1 {
@@ -62,14 +67,15 @@ div.page-home {
 
         img.banner-image {
             margin: auto;
-            max-width: 1000px;
+            max-width: $maxScreenWidth;
             width: 100%;
         }
     }
 
     nav.navbar {
-        max-width: 1100px;
+        max-width: $maxScreenWidth;
         margin: auto;
+        border-radius: 0;
     }
 
     div.content {
