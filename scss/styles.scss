@@ -1,0 +1,64 @@
+body {
+    background-color: #E5E5E5;
+}
+
+div.page-home {
+    
+    // Top banner (large)
+    @media(min-width: 768px) {
+        div.banner {
+            h1 {
+                position: absolute;
+                left: 50%;
+                font-size: 54px;
+                color: #FFFFFF;
+            }
+            @media(min-width: 992px) {
+                h1 {
+                    left: 40%;
+                }
+            }
+            h1.greeting1 {
+                top: 80px;
+            }
+            h1.greeting2 {
+                top: 180px;
+            }
+            img.banner-image {
+                max-width: 1000px;
+                margin: auto;
+            }
+        }
+    }
+    
+    // Top banner (mobile)
+    @media(max-width: 767px) {
+        div.banner {
+            h1 {
+                position: absolute;
+                left: 65%;
+                font-size: 24px;
+                color: #FFFFFF;
+            }
+            h1.greeting1 {
+                top: 12px;
+            }
+            h1.greeting2 {
+                top: 55px;
+            }
+            img.banner-image {
+                width: 100%;
+                margin: auto;
+            }
+        }
+    }
+    
+    nav.navbar {
+        max-width: 1000px;
+        margin: auto;
+    }
+    
+    div.content {
+        height: 1000px;
+    }
+}
