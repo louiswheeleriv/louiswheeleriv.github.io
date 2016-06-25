@@ -3,82 +3,122 @@ $sm: 480px;
 $md: 768px;
 $lg: 992px;
 
-$maxScreenWidth: 1000px;
+$MAX_SCREEN_WIDTH: 1000px;
+$APP_WIDTH: 704px;
 
 $COLOR_WHITE: #FFFFFF;
+$COLOR_BLACK: #000000;
 $COLOR_BG_GRAY: #E5E5E5;
+$COLOR_HR_GRAY: #888888;
 
 body {
     background-color: $COLOR_BG_GRAY;
 }
 
-div.page-home {
+div.banner {
+    div.banner-text {
+        position: absolute;
 
-    div.banner {
-        div.banner-text {
-            position: absolute;
+        p {
+            color: $COLOR_WHITE;
+            margin: 0;
+        }
+        p.banner-text1 {
+            font-size: 54px;
+            font-weight: bold;
+        }
+        p.banner-text2 {
+            float: right;
+            font-size: 26px;
+            font-weight: lighter;
+        }
 
-            p {
-                color: $COLOR_WHITE;
-                margin: 0;
-            }
+        @media(min-width: $lg) {
+            top: 80px;
+            left: 40%;
             p.banner-text1 {
-                font-size: 54px;
+                font-size: 76px;
                 font-weight: bold;
             }
             p.banner-text2 {
                 float: right;
-                font-size: 26px;
+                font-size: 40px;
                 font-weight: lighter;
             }
-
-            @media(min-width: $lg) {
-                top: 80px;
-                left: 40%;
-                p.banner-text1 {
-                    font-size: 76px;
-                    font-weight: bold;
-                }
-                p.banner-text2 {
-                    float: right;
-                    font-size: 40px;
-                    font-weight: lighter;
-                }
-            }
-            @media(min-width: $md) and (max-width: $lg - 1) {
-                top: 80px;
-                left: 48%;
-            }
-            @media(min-width: $sm) and (max-width: $md - 1) {
-                top: 70px;
-                left: 40%;
-                p.banner-text1 {
-                    font-size: 42px;
-                }
-            }
-            @media(max-width: $xs) and (max-width: $sm - 1) {
-                top: 36px;
-                left: 37%;
-                p.banner-text1 {
-                    font-size: 34px;
-                }
+        }
+        @media(min-width: $md) and (max-width: $lg - 1) {
+            top: 80px;
+            left: 48%;
+        }
+        @media(min-width: $sm) and (max-width: $md - 1) {
+            top: 70px;
+            left: 40%;
+            p.banner-text1 {
+                font-size: 42px;
             }
         }
-
-        img.banner-image {
-            margin: auto;
-            max-width: $maxScreenWidth;
-            width: 100%;
+        @media(max-width: $xs) and (max-width: $sm - 1) {
+            top: 36px;
+            left: 37%;
+            p.banner-text1 {
+                font-size: 34px;
+            }
         }
     }
 
-    nav.navbar {
-        max-width: $maxScreenWidth;
+    img.banner-image {
         margin: auto;
-        border-radius: 0;
+        max-width: $MAX_SCREEN_WIDTH;
+        width: 100%;
     }
+}
+
+nav.navbar {
+    max-width: $MAX_SCREEN_WIDTH;
+    margin: auto;
+    border-radius: 0;
+}
+
+div.page-home {
 
     div.content {
         height: 1000px;
+    }
+}
+
+div.page-about {
+
+}
+
+div.page-resume {
+
+}
+
+div.page-projects {
+
+    div.content {
+
+        a.link-github {
+            display: block;
+            margin: 15px auto 0;
+            max-width: 300px;
+            font-size: 24px;
+        }
+
+        hr {
+            border-color: $COLOR_HR_GRAY;
+            max-width: $APP_WIDTH;
+        }
+
+        div.app-example {
+            max-width: $APP_WIDTH;
+            margin: 40px auto;
+
+            canvas {
+                display: block;
+                margin: 0 auto;
+                border: 2px solid $COLOR_BLACK;
+            }
+        }
     }
 }

@@ -7,7 +7,9 @@
     <script type="text/javascript" src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="public/lib/paper/dist/paper-full.min.js"></script>
     <script type="text/javascript" src="public/lib/lodash/dist/lodash.min.js"></script>
+
     <script type="text/paperscript" src="js/alien_blaster.js" canvas="canvas-alien-blaster"></script>
+    <script type="text/paperscript" src="js/hex_tiles.js" canvas="canvas-hex-tiles"></script>
 
     <link rel="stylesheet" type="text/css" href="public/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -15,36 +17,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="page-home">
-        <div class="banner">
-            <div class="banner-text">
-                <p class="banner-text1">My Projects</p>
-            </div>
-            <img src="images/louis-banner.jpg" class="banner-image img-responsive"/>
+    <div class="banner">
+        <div class="banner-text">
+            <p class="banner-text1">My Projects</p>
         </div>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-items">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div>
-                    <div class="collapse navbar-collapse" id="navbar-items">
-                        <ul class="nav navbar-nav">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="about">About</a></li>
-                            <li><a href="resume">Resume</a></li>
-                            <li class="active"><a href="projects">Projects</a></li>
-                        </ul>
-                    </div>
+        <img src="images/louis-banner.jpg" class="banner-image img-responsive"/>
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-items">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="resume">Resume</a></li>
+                        <li class="active"><a href="projects">Projects</a></li>
+                    </ul>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <div class="page-projects">
         <div class="content">
-            <canvas id="canvas-alien-blaster" width="700" height="500" style="border: 1px solid black"></canvas>
+            <a class="link-github" href="https://github.com/louiswheeleriv">Check out my GitHub page!</a>
+            <hr/>
+
+            <div class="app-example app-alien-blaster">
+                <h3>alien_blaster.js</h3>
+                <canvas id="canvas_alien_blaster" width="700" height="500"></canvas>
+                <img id="dat_boi" src="images/dat_boi.png" style="display: none;"/>
+            </div>
+
+            <div class="app-example app-hex-tiles">
+                <h3>hex_tiles.js</h3>
+                <canvas id="canvas_hex_tiles" width="700" height="500"></canvas>
+            </div>
         </div>
     </div>
 </body>
