@@ -91,7 +91,7 @@ var restartText = new PointText({
     justification: 'center',
     fontSize: 30,
     fillColor: 'white',
-    content: 'Press R to restart',
+    content: 'Click anywhere to restart',
     visible: false
 });
 
@@ -436,12 +436,8 @@ function setupGame(numDef, hp, invRate) {
 function onMouseUp(event) {
     if (isPlayerAlive()) {
         bullets.push(defenders[0].fire(event.point));
-    }
-}
-
-function onKeyUp(event) {
-    // If R key pressed, reset
-    if (event.key == 'r') {
+    } else {
+        // Reset if player clicks after game over
         setupGame(NUM_DEFENDERS, PLAYER_MAX_HEALTH, INVADER_RATE);
     }
 }
