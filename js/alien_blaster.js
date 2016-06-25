@@ -423,6 +423,7 @@ function setupGame(numDef, hp, invRate) {
     restartText.visible = false;
     healthText.content = ('Health: ' + health);
     scoreText.content = ('Score: ' + 0);
+    invadersKilled = 0;
 
     clearDemBois(demBois);
     demBois = createDemBois(1);
