@@ -114,6 +114,10 @@ div.page-projects {
             max-width: $APP_WIDTH;
             margin: 40px auto;
 
+            div.app-description {
+                margin: 0 70px;
+            }
+
             canvas {
                 display: block;
                 margin: 0 auto;
