@@ -122,6 +122,10 @@ div.page-projects {
                 display: block;
                 margin: 0 auto;
                 border: 2px solid $COLOR_BLACK;
+
+                @media(max-width: $xs) {
+                    width: 100%;
+                }
             }
         }
     }
