@@ -1,0 +1,26 @@
+{
+  "name": "louiswheeleriv.github.io",
+  "version": "1.0.0",
+  "description": "personal site",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-sass": "^2.3.2",
+    "gulp-cssnano": "^2.1.2",
+    "run-sequence": "^1.2.1",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louiswheeleriv/louiswheeleriv.github.io.git"
+  },
+  "author": "louiswheeleriv@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louiswheeleriv/louiswheeleriv.github.io/issues"
+  },
+  "homepage": "https://github.com/louiswheeleriv/louiswheeleriv.github.io#readme"
+}

@@ -13,11 +13,31 @@ $COLOR_HR_GRAY: #888888;
 
 body {
     background-color: $COLOR_BG_GRAY;
+    /*
+    background-image: url('../images/louis_banner.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: top;
+    */
+}
+
+img.banner-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $MAX_SCREEN_WIDTH;
+    z-index: -1;
 }
 
 div.banner {
     div.banner-text {
         position: absolute;
+        left: 40%;
+        z-index: -1;
 
         p {
             color: $COLOR_WHITE;
@@ -35,7 +55,7 @@ div.banner {
 
         @media(min-width: $lg) {
             top: 80px;
-            left: 40%;
+            //left: 40%;
             p.banner-text1 {
                 font-size: 76px;
                 font-weight: bold;
@@ -65,42 +85,40 @@ div.banner {
             }
         }
     }
-
-    img.banner-image {
-        margin: auto;
-        max-width: $MAX_SCREEN_WIDTH;
-        width: 100%;
-    }
 }
 
 nav.navbar {
     max-width: $MAX_SCREEN_WIDTH;
-    margin: auto;
+    margin: 359px auto 0;
     border-radius: 0;
+    z-index: 1;
 }
 
-div.page-home {
+div.page-about {
+    background: $COLOR_BG_GRAY;
 
     div.content {
         height: 1000px;
     }
 }
 
-div.page-about {
-
-}
-
 div.page-resume {
+    background: $COLOR_BG_GRAY;
 
+    div.content {
+        height: 1000px;
+    }
 }
 
 div.page-projects {
+    background: $COLOR_BG_GRAY;
 
     div.content {
 
         a.link-github {
             display: block;
-            margin: 15px auto 0;
+            margin: 0 auto;
+            padding-top: 20px;
             max-width: 300px;
             font-size: 24px;
         }

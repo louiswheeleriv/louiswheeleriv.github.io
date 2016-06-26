@@ -1,0 +1,17 @@
+{
+  "name": "louiswheeleriv.github.io",
+  "homepage": "https://github.com/louiswheeleriv/louiswheeleriv.github.io",
+  "authors": [
+    "Louis Wheeler <louiswheeleriv@gmail.com>"
+  ],
+  "description": "personal site",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery.stellar": "stellar#^0.6.2",
+    "lodash": "^4.13.1",
+    "paper": "^0.9.25"
+  }
+}

@@ -7,6 +7,7 @@
     <script type="text/javascript" src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="public/lib/paper/dist/paper-full.min.js"></script>
     <script type="text/javascript" src="public/lib/lodash/dist/lodash.min.js"></script>
+    <script type="text/javascript" src="public/lib/jquery.stellar/jquery.stellar.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="public/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -14,13 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="banner">
-        <div class="banner-text">
-            <p class="banner-text1">Louis Wheeler</p>
-            <p class="banner-text2">Software Developer</p>
-        </div>
-        <img src="images/louis-banner.jpg" class="banner-image img-responsive"/>
-    </div>
+    <img src="images/louis_banner.jpg" class="banner-image img-responsive"/>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -33,8 +28,7 @@
             <div>
                 <div class="collapse navbar-collapse" id="navbar-items">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="about">About</a></li>
+                        <li class="active"><a href="/">About</a></li>
                         <li><a href="resume">Resume</a></li>
                         <li><a href="projects">Projects</a></li>
                     </ul>
@@ -42,10 +36,27 @@
             </div>
         </div>
     </nav>
-    <div class="page-home">
+    <div class="page-about">
+        <div class="banner">
+            <div class="banner-text" data-stellar-ratio="0.4">
+                <p class="banner-text1">Louis Wheeler</p>
+                <p class="banner-text2">Software Developer</p>
+            </div>
+        </div>
         <div class="content">
 
         </div>
     </div>
+    <script>
+        $(window).load(function() {
+            $('body').stellar();
+            $('nav.navbar').css('margin-top', $('img.banner-image').css('height'));
+            console.log('SETTING margin-top to ' + $('img.banner-image').css('height'));
+
+            window.onresize = function(event) {
+                $('nav.navbar').css('margin-top', $('img.banner-image').css('height'));
+            }
+        });
+    </script>
 </body>
 </html>
