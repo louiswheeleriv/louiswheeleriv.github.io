@@ -418,6 +418,7 @@ var invadersKilled = 0;            // Num invaders killed
 //
 
 //setupGame(numDefenders, PLAYER_MAX_HEALTH, invaderRate);
+stars = createStars(NUM_STARS);
 
 function setupGame(numDef, hp, invRate) {
     invaders = clearInvaders(invaders);
