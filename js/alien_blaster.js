@@ -402,7 +402,7 @@ function createDemBois(numToCreate) {
 var invaders = [];
 var defenders = [];
 var bullets = [];
-var stars = [];
+var stars = createStars(NUM_STARS);
 var demBois = [];
 
 var numDefenders = NUM_DEFENDERS;  // Num defenders in game
@@ -413,12 +413,11 @@ var framesSinceSpawn = 0;          // Frames since last spawn
 var invadersAllowedThrough = 0;    // Num invaders which reached bottom
 var invadersKilled = 0;            // Num invaders killed
 
+startText.bringToFront();
+
 //
 // Start game!
 //
-
-//setupGame(numDefenders, PLAYER_MAX_HEALTH, invaderRate);
-stars = createStars(NUM_STARS);
 
 function setupGame(numDef, hp, invRate) {
     invaders = clearInvaders(invaders);
