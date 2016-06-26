@@ -86,6 +86,15 @@ var deathText = new PointText({
     visible: false
 });
 
+var startText = new PointText({
+    point: [view.size.width / 2, (view.size.height / 2) + 50],
+    justification: 'center',
+    fontSize: 30,
+    fillColor: 'white',
+    content: 'Click anywhere to start',
+    visible: true
+});
+
 var restartText = new PointText({
     point: [view.size.width / 2, (view.size.height / 2) + 50],
     justification: 'center',
@@ -397,7 +406,7 @@ var stars = [];
 var demBois = [];
 
 var numDefenders = NUM_DEFENDERS;  // Num defenders in game
-var health = PLAYER_MAX_HEALTH;    // Num invaders allowed through before death
+var health = 0;                    // Num invaders allowed through before death
 
 var invaderRate = INVADER_RATE;    // Frames between invader spawns
 var framesSinceSpawn = 0;          // Frames since last spawn
@@ -408,7 +417,7 @@ var invadersKilled = 0;            // Num invaders killed
 // Start game!
 //
 
-setupGame(numDefenders, health, invaderRate);
+//setupGame(numDefenders, PLAYER_MAX_HEALTH, invaderRate);
 
 function setupGame(numDef, hp, invRate) {
     invaders = clearInvaders(invaders);
@@ -419,6 +428,7 @@ function setupGame(numDef, hp, invRate) {
     defenders = createDefenders(NUM_DEFENDERS);
 
     health = hp;
+    startText.visible = false;
     deathText.visible = false;
     restartText.visible = false;
     healthText.content = ('Health: ' + health);
