@@ -8,6 +8,7 @@
     <script type="text/javascript" src="public/lib/paper/dist/paper-full.min.js"></script>
     <script type="text/javascript" src="public/lib/lodash/dist/lodash.min.js"></script>
     <script type="text/javascript" src="public/lib/jquery.stellar/jquery.stellar.min.js"></script>
+    <script type="text/javascript" src="js/dynamic_banner.js"></script>
 
     <script type="text/paperscript" src="js/alien_blaster.js" canvas="canvas-alien-blaster"></script>
     <script type="text/paperscript" src="js/hex_map.js" canvas="canvas-hex-map"></script>
@@ -88,14 +89,5 @@
             </div>
         </div>
     </div>
-    <script>
-        $('body').stellar();
-        $('nav.navbar').css('margin-top', $('img.banner-image').css('height'));
-        console.log('SETTING margin-top to ' + $('img.banner-image').css('height'));
-
-        window.onresize = function(event) {
-            $('nav.navbar').css('margin-top', $('img.banner-image').css('height'));
-        }
-    </script>
 </body>
 </html>
