@@ -1,6 +1,7 @@
 $(window).load(function() {
 
     if (window.innerWidth >= 768) {
+        document.getElementById('banner-text').dataset.stellarRatio = 0.5;
         $('body').stellar();
     }
 
